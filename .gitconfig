@@ -1,0 +1,25 @@
+[user]
+	email = bogdan.bolchis@kpn.com
+	name = Bogdan Bolchis
+[core]
+	quotepath = false
+	excludesfile = /Users/bogdanb/.gitignore
+[color]
+	ui = 1
+[alias]
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	st = status
+	lo = log --all --graph --decorate --oneline --abbrev-commit
+	spp = !git stash && git pull && git stash pop
+	discard-all = reset --hard HEAD
+	delete-last-commit = reset --hard HEAD~1
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[push]
+	default = simple
